@@ -1,0 +1,167 @@
+body {
+  font-family: 'TT Commons-Trial-Regular', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.btn {
+  color: #fff;
+  padding: 16px 23px;
+  background-color: #FC0000;
+  transform: skew(-20deg);
+  min-width: 205px;
+  text-transform: uppercase;
+  position: relative;
+  transition: box-shadow .3s, filter .3s;
+
+  &:hover {
+    box-shadow:(8px 8px 4px #B90303);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  &:active {
+    background-color: #B90303;
+    box-shadow: none;
+    filter: none;
+  }
+
+  &--reg {
+    background-color: var(--red) ;
+    color: #fff;
+    padding: 20px 45px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+    width: 100%;
+    transform: none;
+
+    @include media(xs) {
+      width: unset;
+    }
+  
+    &:hover {
+      background-color: var(--hover-red);
+      box-shadow: unset;
+      filter: 0;
+    }
+  }
+   
+}
+
+.section {
+  &-video,
+  &-bike {
+    white-space: nowrap; 
+    overflow: hidden; 
+    position: relative;
+  }
+
+  &-form {
+    background-color: #F1E7D4;
+  }
+}
+
+.red-section {
+  background-color: #FC0000;
+  min-height: 802px;
+}
+
+ .img-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    bottom: 0;
+    width: 100px;
+    // animation: rotate-text 5s linear infinite;
+
+    @include media(xs) {
+      bottom: -62px;
+      right: -28px;
+      left: unset;
+      transform: translate(0);
+      width: 135px;
+    }
+    cursor: pointer;    
+    // &:hover {
+    //  .hover-ico {
+    //   fill: #FC1919;
+    //   color: #FC1919;
+      
+    //  }
+    // }
+
+    // &:active {
+    //   path {
+    //    fill: #B90303; 
+    //    color: #B90303; 
+       
+    //   }
+    //  }
+}
+
+
+
+
+.title-anim {
+  font-family: 'TT Commons-Trial-Italic', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  position: absolute;
+  animation: slide 10s linear infinite;
+  top: 2%;
+  color: #fff;
+
+  @include media(xs) {
+    top: 40%;
+    font-size: 120px;
+  }
+
+  &--second {
+    top: 88%;
+    animation: slide-reverse 8s linear infinite;
+    color: var(--red);
+    text-shadow: 0 0 10px var(--white);
+
+    @include media(xs) {
+      top: 60%;
+    }
+  }
+
+  &--bike {
+    animation: slide 15s linear infinite;
+    &-second {
+      animation: slide-reverse 12s linear infinite;
+      top: 70%;
+
+    
+    }
+  }
+
+  &:first-child {
+    margin-bottom: 20px;
+  }
+
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.menu__link.menu-white {
+  color: #fff;
+}
+

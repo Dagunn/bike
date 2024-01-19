@@ -1,0 +1,37 @@
+.footer {
+  background: #192632;
+  padding: 30px 85px;
+  color: var(--white);
+
+  &__cont-left {
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  &__text {
+    gap: 12px 0;
+    justify-content: center;
+    flex-direction: column;
+
+    @include media(xs) {
+      gap: 0;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__text-right {
+    color: #5A636B;
+
+    a {
+      color: var(--white);
+      text-decoration: underline;
+      transition: color .3s;
+
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+}
+

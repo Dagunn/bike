@@ -1,0 +1,146 @@
+.header {
+  background-color: #F1E7D4;
+  background-image: url('../../img/background/top-bg-mob.png');
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  
+
+  @include media(xs) {
+    background-image: url('../../img/background/top-bg.png');
+    background-position: right top;
+    background-size: 607px;
+    background-repeat: no-repeat;
+  }
+  @include media(md) {
+    background-image: url('../../img/background/top-bg.png');
+    background-position: right center;
+    background-size: 486px;
+    background-repeat: no-repeat;
+  }
+
+  &__top {
+    &-menu {
+      padding: 20px 0;
+      margin-bottom: 40px;
+
+      @include media(xs) {
+        margin-bottom: 100px;
+      }
+    }
+
+    &-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      text-align: center;
+
+      @include media(md) {
+        flex-direction: row;
+        gap: 0;
+      }
+
+      @include media(xs) {
+        align-items: flex-start;
+        text-align: left;
+        
+      }
+    }
+
+    &-text,
+    &-img {
+      width: 100%;
+
+      @include media(xs) {
+        width: 50%;
+      }
+    }
+
+    &-suptitle {
+      color: var(--red);
+      font-family: "TT Commons-Trial-Italic", Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-style: italic;
+
+      @include media(xs) {
+        font-size: 30px;
+      }
+    }
+
+    &-title {
+      font-family: 'Soviet Font',Arial, Helvetica, sans-serif;
+      color: #192632;
+      font-size: 38px;
+      line-height: 60px;
+      letter-spacing: 2px;
+      max-width: 600px;
+      margin: 10px auto 30px auto;
+
+      @include media(xs) {
+        font-size: 80px;
+        line-height: 150px;
+        max-width: 790px;
+        margin: 10px 0 50px;
+      }
+
+      @include media(md) {
+        font-size: 100px;
+        line-height: 150px;
+        margin: 10px 0 50px;
+      }
+    }
+
+    &-bike {
+      max-width: 620px;
+      width: 390px;
+      position: relative;
+      right: 100px;
+
+      @include media(xs) {
+        width: 520px;
+        right: 0;
+      }
+
+      @include media(md) {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+.menu {
+  display: none;
+
+  &__list {
+    gap:25px 
+  }
+
+  &__link {
+    font-family: 'TT Commons-Trial-Regular', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:#192632;
+    padding: 30px 15px;
+    transition: background-color .3s;
+
+    &:hover {
+      color: var(--red);
+      height: 86px;
+      background-color:#fff;
+    }
+  }
+
+  @include media(xs) {
+    display: block;
+  }
+}
+
+.menu__link.menu-white.red-bg {
+  color: #192632;
+  &:hover {
+    color: var(--white);
+    background-color: var(--red)
+  }
+}
