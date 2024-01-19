@@ -1,6 +1,6 @@
 .header {
   background-color: #F1E7D4;
-  background-image: url('../../img/background/top-bg-mob.png');
+  background-image: url('../img/background/top-bg-mob.png');
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -8,13 +8,13 @@
   
 
   @include media(xs) {
-    background-image: url('../../img/background/top-bg.png');
+    background-image: url('../img/background/top-bg.png');
     background-position: right top;
     background-size: 607px;
     background-repeat: no-repeat;
   }
   @include media(md) {
-    background-image: url('../../img/background/top-bg.png');
+    background-image: url('../img/background/top-bg.png');
     background-position: right center;
     background-size: 486px;
     background-repeat: no-repeat;
