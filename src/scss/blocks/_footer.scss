@@ -28,8 +28,10 @@
       text-decoration: underline;
       transition: color .3s;
 
-      &:hover {
-        color: var(--red);
+      @media (hover:hover) {
+        &:hover {
+          color: var(--red);
+        }
       }
     }
   }

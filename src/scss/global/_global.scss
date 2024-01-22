@@ -19,9 +19,11 @@ body {
   position: relative;
   transition: box-shadow .3s, filter .3s;
 
-  &:hover {
-    box-shadow:(8px 8px 4px #B90303);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @media (hover:hover) {
+    &:hover {
+      box-shadow:(8px 8px 4px #B90303);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
   }
 
   &:active {
@@ -44,10 +46,12 @@ body {
       width: unset;
     }
   
-    &:hover {
-      background-color: var(--hover-red);
-      box-shadow: unset;
-      filter: 0;
+    @media (hover:hover) {
+      &:hover {
+        background-color: var(--hover-red);
+        box-shadow: unset;
+        filter: 0;
+      }
     }
   }
    
@@ -130,9 +134,7 @@ body {
     top: 88%;
     animation: slide-reverse 10s linear infinite;
     color: var(--red);
-    -webkit-text-stroke-color: var(--white);
-    -webkit-text-stroke-width: 0.1px;
-    text-stroke-width: 0.1px;
+    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white), -1px 1px 0 var(--white), 1px 1px 0 var(--white);
 
     @include media(xs) {
       top: 60%;

@@ -138,10 +138,12 @@
     padding: 30px 15px;
     transition: background-color .3s;
 
-    &:hover {
-      color: var(--red);
-      height: 86px;
-      background-color:#fff;
+    @media (hover:hover) {
+      &:hover {
+        color: var(--red);
+        height: 86px;
+        background-color:#fff;
+      }
     }
   }
 
@@ -151,14 +153,24 @@
 }
 
 .menu__link.menu-white {
-  color: #fff;
+  color: var(--white);
+
+ @media (hover:hover) {
+  &:hover {
+    color: var(--red);
+    background-color: var(--white)
+  }
+ }
 }
 
 .menu__link.menu-white.red-bg {
   color: #192632;
-  &:hover {
-    color: var(--white);
-    background-color: var(--red)
+  
+  @media (hover:hover) {
+    &:hover {
+      color: var(--white);
+      background-color: var(--red);
+    }
   }
 }
 

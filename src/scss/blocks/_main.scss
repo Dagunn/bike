@@ -82,9 +82,11 @@ input {
     border: 1px solid #192632;
   }
 
+ @media (hover:hover) {
   &:hover {
     border: 1px solid #192632;
   }
+ }
 
   &::placeholder {
     color: #BDB199;
@@ -246,10 +248,12 @@ input[type="number"] {
 }
 
 .select__btn {
-  &:hover {
-    .policy {
-      &:before {
-        border-color: var(--red);
+  @media (hover:hover) {
+    &:hover {
+      .policy {
+        &:before {
+          border-color: var(--red);
+        }
       }
     }
   }
