@@ -117,7 +117,7 @@ body {
   letter-spacing: 3.6px;
   text-transform: uppercase;
   position: absolute;
-  animation: slide 10s linear infinite;
+  animation: slide 12s linear infinite;
   top: 2%;
   color: #fff;
 
@@ -128,9 +128,11 @@ body {
 
   &--second {
     top: 88%;
-    animation: slide-reverse 8s linear infinite;
+    animation: slide-reverse 10s linear infinite;
     color: var(--red);
-    text-shadow: 0 0 10px var(--white);
+    -webkit-text-stroke-color: var(--white);
+    -webkit-text-stroke-width: 0.1px;
+    text-stroke-width: 0.1px;
 
     @include media(xs) {
       top: 60%;
@@ -138,9 +140,9 @@ body {
   }
 
   &--bike {
-    animation: slide 15s linear infinite;
+    animation: slide 18s linear infinite;
     &-second {
-      animation: slide-reverse 12s linear infinite;
+      animation: slide-reverse 15s linear infinite;
       top: 70%;
 
     
@@ -153,15 +155,6 @@ body {
 
 }
 
-.header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 3;
-}
 
-.menu__link.menu-white {
-  color: #fff;
-}
+
 

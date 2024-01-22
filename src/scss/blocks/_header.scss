@@ -108,6 +108,19 @@
     }
   }
 
+  &-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    padding: 15px 10px;
+
+    @include media(xs) {
+      padding: 20px 60px;
+    }
+  }
+
 }
 
 
@@ -137,6 +150,10 @@
   }
 }
 
+.menu__link.menu-white {
+  color: #fff;
+}
+
 .menu__link.menu-white.red-bg {
   color: #192632;
   &:hover {
@@ -144,3 +161,4 @@
     background-color: var(--red)
   }
 }
+

@@ -25,7 +25,7 @@ const notify = require('gulp-notify');
 const webpack = require('webpack-stream');
 const babel = require('gulp-babel');
 const webp = require('gulp-webp');
-// const imageMin = require('gulp-imagemin');
+const imageMin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 
 // const media = require('gulp-group-css-media-queries');
@@ -85,7 +85,7 @@ gulp.task('imgs:docs', function () {
     .pipe(gulp.dest('./docs/img/'))
     .pipe(gulp.src('./src/img/**/*'))
     .pipe(changed('./docs/img/'))
-    // .pipe(imageMin({verbose: true}))
+    .pipe(imageMin({ verbose: true }))
     .pipe(gulp.dest('./docs/img/'))
 
 })

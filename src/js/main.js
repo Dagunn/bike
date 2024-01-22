@@ -25,23 +25,23 @@ $(document).ready(function () {
     let header = $('.header__top-menu');
     let logo = $('.logo-img');
     let menuLink = $('.menu__link');
-    let burgerIcon = $('.burger-menu__icon');
+    let burgerIcon = $('.icon-burger');
 
     if (scrollPosition > 2050) {
       header.addClass('header-fixed');
       logo.attr('src', 'img/icons/logo.svg');
       menuLink.addClass('red-bg');
-      burgerIcon.attr('src', 'img/icons/burger.svg')
+      burgerIcon.removeClass('icon-burger--white')
     } else if (scrollPosition > 450) {
       header.addClass('header-fixed');
       logo.attr('src', 'img/icons/logo-light.svg');
       menuLink.removeClass('red-bg').addClass('menu-white');
-      burgerIcon.attr('src', 'img/icons/burger-white.svg')
+      burgerIcon.addClass('icon-burger--white')
     } else {
       header.removeClass('header-fixed');
       logo.attr('src', 'img/icons/logo.svg');
       menuLink.removeClass('menu-white');
-      burgerIcon.attr('src', 'img/icons/burger.svg')
+      burgerIcon.removeClass('icon-burger--white')
     }
   });
 
