@@ -27,7 +27,7 @@ $(document).ready(function () {
     let menuLink = $('.menu__link');
     let burgerIcon = $('.icon-burger');
 
-    if (scrollPosition > 2050) {
+    if (scrollPosition > 2098) {
       header.addClass('header-fixed');
       logo.attr('src', 'img/icons/logo.svg');
       menuLink.addClass('red-bg');
